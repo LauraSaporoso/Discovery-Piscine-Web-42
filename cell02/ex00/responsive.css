@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid black;
+    border-spacing: 0;
+}
+
+tr {
+    height: 100vh;
+}
+
+.td-1 {
+    background-color: rgb(33, 124, 33);
+}
+
+.td-2 {
+    background-color: rgb(240, 163, 154);
+}
+
+td {
+    width: 50%;
+    word-wrap: break-word;
+}

@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+}
+
+.backimage{
+    width: 100%;
+    min-height: 500px;
+    background-image: url("https://cdn.wallpapersafari.com/54/36/cS4xfE.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first-p {
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    padding: 20px 40px;
+}
+
+.middle-p {
+    color: white;
+}
+
+.black-box {
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-img {
+    width: 100%;
+    background-image: url("https://img.freepik.com/premium-photo/worm-light-japanese-style-folding-door-luxurious-wallpaper-background-japanese-sliding-partition-wall_301927-203.jpg?w=2000");
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.last-p {
+    padding: auto;
+    background-color: black;
+    color: wheat;
+    padding: 20px 40px;
+}
