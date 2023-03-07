@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+ <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container-1 {
+        display: flex;
+        padding: 30px 30px;
+        background-color: rgb(230, 230, 230);
+        width: 500px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #n1,
+    #n2 {
+        width: 180px;
+        height: 40px;
+    }
+
+    input {
+        border: none;
+        font-size: 30px;
+    }
+    .calculator {
+        border: 5px solid orange;
+        border-radius: 5px;
+        box-shadow: 10px 5px 5px 5px rgb(78, 78, 78);
+    }
+
+    .operators {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+ </style>
+<body>
+    <div class="calculator">
+    <div class="container-1">
+        <input type="text" id="n1">
+        <input type="text" id="n2">
+
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+            <option value="*">*</option>
+        </select>
+        
+        <button onclick="calcRes()">TryMe</button>
+    </div>
+    </div>
+    <script>
+        /*
+    function solve()
+{
+    let n1 = document.getElementById('n1').value;
+    let n2 = document.getElementById('n2').value;
+    
+    if (n1 > 0 && n2 > 0){
+        let sum = parseInt(n1) + parseInt(n2);
+        console.log(sum);
+        alert(sum);
+    }
+    else {
+        alert("Error :(");
+    }
+}
+*/
+
+function calcRes()
+{
+    let n1 = parseFloat(document.getElementById('n1').value);
+    let n2 = parseFloat(document.getElementById('n2').value);
+    let oper = document.getElementById('operators').value;
+
+    if(n1 >= 0 && n2 >= 0)
+    {
+        if(oper === '+')
+        {
+            console.log(n1+n2);
+            alert(n1+n2);
+        }
+        if(oper === '-')
+        {
+            console.log(n1-n2);
+            alert(n1-n2);
+        }
+        if(oper === '*')
+        {
+            console.log(n1*n2);
+            alert(n1*n2);
+        }
+        if (oper === '%' || oper === '/')
+        {
+            if(n1 == 0 || n2 == 0)
+            {
+                alert('It’s over 9000!')
+                console.log('It’s over 9000!')
+            }else {
+                
+                if(oper === '/')
+                {
+                    console.log(n1/n2);
+                    alert(n1/n2);
+                }
+                if(oper === '%')
+                {
+                    console.log(n1%n2);
+                    alert(n1%n2);
+                }
+            }
+
+        }
+    } else {
+        alert ("Error :()")
+    } 
+}
+
+const interval = setInterval(function() {
+   alert('Please, use me...');
+ }, 30000);
+
+setInterval(interval); 
+
+    </script>
+</body>
+</html>

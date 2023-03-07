@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: salmon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: monospace;
+}

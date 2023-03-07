@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .baloon {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div onmouseout="reverse()" id="baloon" class="baloon" >
+
+        
+    </div>
+
+    <script>
+
+        let baloon = document.getElementById('baloon');
+        let currWidth = 200;
+        let arr = [ "red", "green", "blue"];
+        let currentColor = 0;
+        
+
+
+        baloon.addEventListener("click", function(e)
+        {
+            
+            
+            if(currWidth < 420)
+            {
+                if (currentColor == 2) {
+                    currentColor = -1;
+                }
+                baloon.style.width = (currWidth+10)+"px";
+                baloon.style.height = (currWidth+10)+"px";
+                currWidth = currWidth+10;
+                
+                this.style.backgroundColor = arr[currentColor + 1];
+                currentColor++;
+                console.log(currWidth);
+
+
+
+                
+                console.log(currentColor)
+            }
+            else {
+                baloon.style.width = 200 +"px";
+                baloon.style.height = 200 +"px";
+                currWidth = 200;
+                this.style.backgroundColor = arr[0];
+                console.log(currentColor)
+                currentColor = 0;
+            }
+            
+        })   
+
+        function reverse() {
+            
+            
+            console.log(currWidth);
+            if(currWidth > 200)
+            {
+                reverseColor();
+                baloon.style.width = (currWidth-5)+"px";
+                baloon.style.height = (currWidth-5)+"px"; 
+                currWidth = currWidth-5;
+            } 
+
+
+        function reverseColor() {
+            if (currentColor == 0) {
+                currentColor = 2;
+            }
+            else if (currentColor == 2) {
+                currentColor = 1;
+            }
+            else if (currentColor == 1) {
+                currentColor = 0;
+            }
+            baloon.style.backgroundColor = arr[currentColor];
+            console.log(currentColor)
+            }
+        }
+        
+    </script>
+</body>
+</html>
