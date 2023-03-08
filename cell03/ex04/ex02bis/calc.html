@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: monospace;
+        }
+    
+        .container-1 {
+            display: flex;
+            padding: 30px 30px;
+            width: 500px;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        #n1,
+        #n2 {
+            width: 180px;
+            height: 40px;
+        }
+    
+        input {
+            border: none;
+            font-size: 30px;
+        }
+        .calculator {
+            border: 5px solid orange;
+            border-radius: 5px;
+            box-shadow: 10px 5px 5px 5px rgb(78, 78, 78);
+            background-color: rgb(230, 230, 230);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .operators {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        button {
+            margin-bottom: 20px;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid rgb(190, 190, 190);
+            border-radius: 5px;
+        }
+    
+    
+     </style>
+</head>
+
+
+<body>
+    <div class="calculator">
+    <div class="container-1">
+        <input type="text" id="n1">
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+            <option value="*">*</option>
+        </select>
+        <input type="text" id="n2">
+    </div>
+
+    <button onclick="calcRes()">TryMe</button>
+    </div>
+    <script>
+
+function calcRes() {
+  let n1 = parseFloat($('#n1').val());
+  let n2 = parseFloat($('#n2').val());
+  let oper = $('#operators').val();
+
+  if (n1 >= 0 && n2 >= 0) {
+    if (oper === '+') {
+      console.log(n1 + n2);
+      alert(n1 + n2);
+    }
+    if (oper === '-') {
+      console.log(n1 - n2);
+      alert(n1 - n2);
+    }
+    if (oper === '*') {
+      console.log(n1 * n2);
+      alert(n1 * n2);
+    }
+    if (oper === '%' || oper === '/') {
+      if (n1 == 0 || n2 == 0) {
+        alert('It’s over 9000!');
+        console.log('It’s over 9000!');
+      } else {
+        if (oper === '/') {
+          console.log(n1 / n2);
+          alert(n1 / n2);
+        }
+        if (oper === '%') {
+          console.log(n1 % n2);
+          alert(n1 % n2);
+        }
+      }
+    }
+  } else {
+    alert("Error :(");
+  }
+}
+
+const interval = setInterval(function() {
+  alert('Please, use me...');
+}, 30000);
+
+setInterval(interval);
+
+
+    </script>
+</body>
+</html>
