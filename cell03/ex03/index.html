@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: white;
+            font-size: 30px;
+        }
+        body{
+            background: linear-gradient(#e66465, #9198e5);
+            background-attachment: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 40px;
+            flex-direction: column;
+            font-family: monospace;
+        }
+
+        #ft_list {
+            background-color: white;
+            border-radius: 10px;
+            border: 5px solid #9198e5;
+            width: 350px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100px;
+            padding: 20px 10px 10px 20px;
+        }
+
+        button{
+            font-size: 20px;
+            border: 3px solid #9198e5;
+            background-color: #a2a7e0;
+            border-radius: 5px;
+            margin: 20px 0;
+            padding: 10px 20px;
+            color: white;
+            font-family: monospace;
+        }
+
+        .addTodoStyle {
+            border: 3px solid #9198e5;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body onload="cookieee()">
+    <h1>To-do list</h1>
+    <button onclick="newTodo()" type="button" id="new">New</button>
+    <div id="ft_list">
+    
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
+
